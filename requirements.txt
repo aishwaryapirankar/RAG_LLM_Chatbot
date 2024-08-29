@@ -1,0 +1,6 @@
+streamlit
+langchain-groq
+langchain_community
+langchain
+faiss-cpu
+SpeechRecognition
