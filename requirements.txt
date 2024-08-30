@@ -1,7 +1,16 @@
 streamlit
 langchain-groq
-langchain_community
-langchain
+langchain_community==0.2.12
+langchain==0.2.14
+langchain-core==0.2.34
+langchain-groq== 0.1.9
+langchain-text-splitters
+huggingface-hub
+sentence_transformers
+python-dotenv
+pypdf
 faiss-cpu
 SpeechRecognition
 gtts
+pipwin
+pyaudio

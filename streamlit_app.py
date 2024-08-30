@@ -11,9 +11,11 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate
 
 # Import Speech Synthesis packages
+from audio_recorder_streamlit import audio_recorder 
 import speech_recognition as sr
 import gtts
 import time
+import io
 
 # Load the environmental variables 
 from dotenv import load_dotenv
@@ -72,17 +74,23 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-# Process speech input 
+# Process speech input
 def listen():
-    recognizer = sr.Recognizer()
-    with sr.Microphone() as source:
-        st.write("Say something now...")
-        audio = recognizer.listen(source)
-    try:
-        text = recognizer.recognize_google(audio)   # speech to text
-        return text
-    except:
-        st.write("Could not understand audio")
+    audio_bytes = audio_recorder(key="audio_recorder")
+    print(audio_bytes)  
+    if audio_bytes:
+        with st.spinner("Transcribing..."):
+            recognizer = sr.Recognizer()
+            with sr.AudioFile(io.BytesIO(audio_bytes)) as source:
+                audio = recognizer.record(source)
+            try:
+                text = recognizer.recognize_google(audio)  # speech to text
+                return text
+            except:
+                st.write("Could not understand audio")
+    else:
+        st.write("No audio recorded.")
+    return None  
 
 # Process text to speech
 def speak_answer(answer):
