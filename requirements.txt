@@ -1,4 +1,6 @@
 streamlit
+streamlit_float
+audio_recorder_streamlit
 langchain-groq
 langchain_community==0.2.12
 langchain==0.2.14
