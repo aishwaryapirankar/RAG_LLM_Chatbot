@@ -1,4 +1,4 @@
-## \*\*README: Unified Speech and Text driven Chatbot
+## Unified Speech and Text driven Chatbot
 
 ### **Overview**
 
