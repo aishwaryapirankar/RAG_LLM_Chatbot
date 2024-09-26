@@ -16,3 +16,5 @@ SpeechRecognition
 gtts
 pipwin
 pyaudio
+twilio 
+requests
