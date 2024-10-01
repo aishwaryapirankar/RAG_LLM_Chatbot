@@ -16,7 +16,7 @@ This project aims to develop a unified chatbot capable of interacting with users
 
 - **Programming Language:** Python
 - **Natural Language Processing:** HuggingFace Transformers, FAISS
-- **Speech Recognition and Text-to-Speech:** Google Speech Recognition, Google Text-to-Speech
+- **Speech Recognition and Text-to-Speech:** Speech Recognition, Google Text-to-Speech
 - **User Interface:** Streamlit
 
 ### **Installation**
