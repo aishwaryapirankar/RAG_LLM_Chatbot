@@ -6,7 +6,6 @@ This project aims to develop a unified chatbot capable of interacting with users
 
 ### **Key Features**
 
-- **Unified Platform Integration:** Seamless integration with Instagram, WhatsApp, and SMS for a unified user experience.
 - **Advanced RAG Model:** Utilizes a sophisticated RAG model (Retrieval Augmented Generation) based on HuggingFace embeddings, FAISS vector, and Mixtral-8x7B LLM for accurate and informative responses.
 - **FAQ Database:** Incorporates a comprehensive FAQ database to address common user queries efficiently.
 - **Speech-Driven Functionality:** Supports both text-based and speech-based interactions, enhancing accessibility and usability.
